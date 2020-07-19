@@ -20,7 +20,7 @@ class CreateBusStopsTable extends Migration
             $table->string('reference_code')->unique();
             $table->string('location_name')->unique();
             $table->decimal('latitude', 10, 8);
-            $table->unsignedDecimal('longitude', 11, 8);
+            $table->decimal('longitude', 11, 8);
             $table->boolean('is_bus_interchange')->default(false);
 
             // Constraints
