@@ -10,6 +10,15 @@ use Modules\BusStop\Interfaces\BusStopRepositoryInterface;
 
 class GetBusTimingDetails extends Controller
 {
+    /**
+     * Invoke action.
+     *
+     * @param Request $request
+     * @param int $busStopId
+     * @param BusFacilityScheduleRepositoryInterface $scheduleRepo
+     * @param BusStopRepositoryInterface $busStopRepo
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
+     */
     public function __invoke(
         Request $request,
         int $busStopId,

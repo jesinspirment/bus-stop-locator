@@ -17,4 +17,17 @@ class BusRepository extends AbstractRepository implements BusRepositoryInterface
     {
         parent::__construct($model);
     }
+
+    /**
+     * @inheritDoc
+     * @see \Modules\Bus\Interfaces\BusRepositoryInterface::findByServiceNumber()
+     */
+    public function findByServiceNumber(int $serviceNumber, array $columns = ['*'], array $with = [])
+    {
+        return $this->model
+            ->newQuery()
+            ->with($with)
+            ->where('service_number', $serviceNumber)
+            ->first($columns);
+    }
 }

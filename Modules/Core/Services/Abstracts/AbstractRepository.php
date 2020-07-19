@@ -44,9 +44,11 @@ abstract class AbstractRepository implements RepositoryInterface
      */
     public function create(array $attributes)
     {
-        return $this->model
-            ->newInstance($attributes)
-            ->save();
+        $newModel = $this->model
+            ->newInstance($attributes);
+
+        $newModel->save();
+        return $newModel;
     }
 
     /**

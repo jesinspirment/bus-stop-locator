@@ -38,16 +38,16 @@ class BusFacilityDatabaseSeeder extends Seeder
             foreach ($buses as $bus) {
                 // Direction A
                 for ($i = 1; $i <= 5; $i++) {
-                    $busFacilityRepo->addBusToBusStop($bus->id, $i, 'A', $i);
+                    $busFacilityRepo->createBusFacility($bus->id, $i, 'A', $i);
                 }
 
                 // Direction B
                 for ($i = 5; $i <= 8; $i++) {
-                    $busFacilityRepo->addBusToBusStop($bus->id, $i, 'B', $i - 4);
+                    $busFacilityRepo->createBusFacility($bus->id, $i, 'B', $i - 4);
                 }
 
                 // Last bus stop for direction B (bus interchange)
-                $busFacilityRepo->addBusToBusStop($bus->id, 1, 'B', 5);
+                $busFacilityRepo->createBusFacility($bus->id, 1, 'B', 5);
             }
 
             DB::commit();

@@ -15,3 +15,7 @@
 Route::middleware('auth:api')
     ->get('/bus-stop/nearest', 'NearestLocator\NearestStopsAction')
     ->name('nearest-bus-stops');
+
+Route::middleware('auth:api')
+    ->post('/bus-stop/{busStopId}/add-bus', 'Bus\AddBus')
+    ->name('add-bus');
