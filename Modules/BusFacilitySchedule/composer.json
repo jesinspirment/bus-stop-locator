@@ -1,0 +1,25 @@
+{
+    "name": "nwidart/busfacilityschedule",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\BusFacilitySchedule\\Providers\\BusFacilityScheduleServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\BusFacilitySchedule\\": ""
+        }
+    }
+}

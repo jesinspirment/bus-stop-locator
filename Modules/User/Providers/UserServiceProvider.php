@@ -29,6 +29,7 @@ class UserServiceProvider extends ServiceProvider
         $this->registerViews();
         $this->registerFactories();
         $this->loadMigrationsFrom(module_path($this->moduleName, 'Database/Migrations'));
+        $this->registerBindings();
     }
 
     /**
@@ -110,6 +111,18 @@ class UserServiceProvider extends ServiceProvider
     public function provides()
     {
         return [];
+    }
+
+    /**
+     * Bind interfaces to implementations.
+     *
+     * @return void
+     */
+    public function registerBindings()
+    {
+        foreach (config('user.bindings') as $key => $binding) {
+            $this->app->bind($key, $binding);
+        }
     }
 
     private function getPublishableViewPaths(): array

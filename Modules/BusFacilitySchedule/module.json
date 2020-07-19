@@ -1,0 +1,13 @@
+{
+    "name": "BusFacilitySchedule",
+    "alias": "busfacilityschedule",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\BusFacilitySchedule\\Providers\\BusFacilityScheduleServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

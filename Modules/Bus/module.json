@@ -1,0 +1,13 @@
+{
+    "name": "Bus",
+    "alias": "bus",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\Bus\\Providers\\BusServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

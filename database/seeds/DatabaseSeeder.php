@@ -12,5 +12,9 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(\Modules\User\Database\Seeders\UserDatabaseSeeder::class);
+        $this->call(\Modules\Bus\Database\Seeders\BusDatabaseSeeder::class);
+        $this->call(\Modules\BusStop\Database\Seeders\BusStopDatabaseSeeder::class);
+        $this->call(\Modules\BusFacility\Database\Seeders\BusFacilityDatabaseSeeder::class);
+        $this->call(\Modules\BusFacilitySchedule\Database\Seeders\BusFacilityScheduleDatabaseSeeder::class);
     }
 }

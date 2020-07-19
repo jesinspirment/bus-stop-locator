@@ -1,4 +1,14 @@
 {
     "User": true,
-    "Auth": true
+    "Auth": true,
+    "Bus": true,
+    "BusStops": true,
+    "BusStop": true,
+    "BusService": true,
+    "BusServiceSchedule": true,
+    "Core": true,
+    "BusFacility": true,
+    "BusFacilitySchedule": true,
+    "GeoCalculator": true,
+    "Geo": true
 }

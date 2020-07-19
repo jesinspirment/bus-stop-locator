@@ -1,0 +1,13 @@
+{
+    "name": "BusStop",
+    "alias": "busstop",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\BusStop\\Providers\\BusStopServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
