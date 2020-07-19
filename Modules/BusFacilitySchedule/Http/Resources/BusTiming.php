@@ -2,6 +2,7 @@
 
 namespace Modules\BusFacilitySchedule\Http\Resources;
 
+use Carbon\Carbon;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class BusTiming extends JsonResource
@@ -14,9 +15,17 @@ class BusTiming extends JsonResource
      */
     public function toArray($request)
     {
+        $arrivalTime       = Carbon::parse($this->next_arrival_time);
+        $differenceMinutes = $arrivalTime->diffInMinutes(now());
+
+        if (60 < $differenceMinutes) {
+            $differenceMinutes = 'N.A';
+        }
+
         return [
-            'bus_number'        => $this->service_number,
-            'next_arrival_time' => $this->next_arrival_time,
+            'bus_number'          => $this->service_number,
+            'next_arrival_time'   => $this->next_arrival_time,
+            'arriving_in_minutes' => $differenceMinutes
         ];
     }
 }
