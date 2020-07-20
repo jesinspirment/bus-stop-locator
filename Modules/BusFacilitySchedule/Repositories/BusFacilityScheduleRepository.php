@@ -36,6 +36,7 @@ class BusFacilityScheduleRepository extends AbstractRepository implements BusFac
             ->where('bf.bus_stop_id', $busStopId)
             ->where('bus_facility_schedules.estimated_arrival_time', '>', now()->toTimeString())
             ->groupBy('bf.bus_id')
+            ->orderBy('b.service_number', 'ASC')
             ->get([
                 'b.service_number',
                 DB::raw('MIN(bus_facility_schedules.estimated_arrival_time) AS next_arrival_time'),

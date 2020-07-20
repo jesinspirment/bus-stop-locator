@@ -6,3 +6,13 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+#bus-stops {
+  thead tr th {
+    font-weight: bolder;
+  }
+
+  .bus-number {
+    margin: 2px 2px;
+  }
+}

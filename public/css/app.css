@@ -10928,3 +10928,11 @@ a.text-dark:focus {
   }
 }
 
+#bus-stops thead tr th {
+  font-weight: bolder;
+}
+
+#bus-stops .bus-number {
+  margin: 2px 2px;
+}
+
