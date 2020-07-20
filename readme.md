@@ -10,6 +10,4 @@ To set up this repository on your local, please follow the instructions as below
 6. Run "php artisan config:cache" again.
 7. Run "npm install", followed by "npm run production".
 
-Now the app should be ready.
-
-PS: I will beautify this README shortly.
+Now the app should be ready by accessing the root of the application from browser.
