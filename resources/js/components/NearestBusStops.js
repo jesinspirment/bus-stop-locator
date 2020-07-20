@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 
-export default function NearestBusStops() {
+export default function NearestBusStops({logoutHandler}) {
     // Hard code user's current location
     const userLatitude = 1.383194;
     const userLongitude = 103.850051;
@@ -126,6 +126,10 @@ export default function NearestBusStops() {
         <React.Fragment>
           <h2>Bus stops nearest to your current location</h2>
           <span>Click bus stop to view bus timing</span>
+
+          <span>
+            <button className="btn btn-dark pull-right" onClick={logoutHandler}>Logout</button>
+          </span>
 
           <table id="bus-stops" className="table table-striped">
             <thead>
