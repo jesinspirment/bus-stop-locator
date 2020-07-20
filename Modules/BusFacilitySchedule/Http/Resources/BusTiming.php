@@ -20,6 +20,8 @@ class BusTiming extends JsonResource
 
         if (60 < $differenceMinutes) {
             $differenceMinutes = 'N.A';
+        } elseif (0 == $differenceMinutes) {
+            $differenceMinutes = 'Arriving';
         }
 
         return [
