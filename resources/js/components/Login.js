@@ -24,6 +24,10 @@ export default function Login({ clientId, clientSecret, isLoggedInHandler }) {
         axios.post('/oauth/token', params)
           .then(response => {
               if (200 === response.status) {
+                  // Set local storage
+                  localStorage.setItem('access_token', response.data.access_token);
+                  localStorage.setItem('expiry', response.data.expires_in + Date.now());
+
                   axios.defaults.headers.common = {'Accept': 'application/json', 'Authorization': `Bearer ${response.data.access_token}`}
                   isLoggedInHandler(true);
               }
